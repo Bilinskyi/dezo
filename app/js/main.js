@@ -2,8 +2,12 @@
 
 $(document).ready(function(){
 
+	$(document).on('click', '.js-hamburger', function(e) {
 
-	// var scr = $(".main-wrapper").height() > $('body').height(); /*CHECK SCROLLBAR*/
+		e.preventDefault();
+		$(this).toggleClass('is-active');
+		$('.menu').slideToggle();
+	})
 
 
 	// var flsm1 = true; /*VARIABLE FOR CHECK WIDTH*/
@@ -11,21 +15,33 @@ $(document).ready(function(){
 
 	$(window).on('load resize', function() {
 
-		/*CHECK WIDTH 1 ITERATION*/
-		// if (window.innerWidth <= 1200) {
-		// 	flsm2 = true;
-		// 	if (flsm1) {
-		// 		flsm1 = false;
-		// 	}
-		// } else {
-		// 	flsm1 = true;
-		// 	if (flsm2) {
-		// 		flsm2 = false; 
-		// 	}
-		// }
+		var abs_block = $('.abs-block__doctor').css('height');
+		$('.relative_js_height').css({
+			paddingBottom: abs_block
+		})	
 
-	});
+	// 	CHECK WIDTH 1 ITERATION
+	// 	if (window.innerWidth <= 767) {
+	// 		flsm2 = true;
+	// 		if (flsm1) {
+	// 			flsm1 = false;
+	// 		}
+	// 	} else {
+	// 		flsm1 = true;
+	// 		if (flsm2) {
+	// 			flsm2 = false; 
+	// 		}
+	// 	}
 
+});
+
+	var abs_block = $('.abs-block__doctor').css('height');
+	$('.relative_js_height').css({
+		paddingBottom: abs_block
+	})	
+
+
+	
 
 	/* SLICK_SLIDER */
 	if ($('.partners').length) {
@@ -80,7 +96,7 @@ $(document).ready(function(){
 		});
 	};
 
-		if ($('.slider-comment').length) {
+	if ($('.slider-comment').length) {
 		$('.slider-comment').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -94,8 +110,9 @@ $(document).ready(function(){
 
 
 	/*MATCHHEIGHT*/
-	$('.adv-block, .js-height').matchHeight();
+	$('.adv-block, .js-height, .js-h-2').matchHeight();
 
+	/*fancyCustom*/
 	$(document).on('click', '.modal-form', function(e) {
 		e.preventDefault();
 		var th = $(this).attr('data-id');
@@ -151,35 +168,11 @@ $(document).ready(function(){
 	});
 
 
-	/* кнопка Вверх */
-	// $("#back-top").hide();
-
 	$(window).scroll(function() {
 
-		/*FADE_IN/FADE_OUT*/
-		// if ($(this).scrollTop() > 250) {
-		// 	$('#back-top').fadeIn(200);
-		// } else {
-		// 	$('#back-top').fadeOut(200);
-		// };
-
-		/*JUMP BUTTON*/
-		// var scrollBottom = $(document).height() - $(window).scrollTop() - $(window).height() ;
-		// if(scrollBottom < 60) {
-		// 	$('#back-top').css('bottom', '235px')
-		// } else {
-		// 	$('#back-top').css('bottom', '50px')
-		// }
 
 	});
 
-
-	/*SCROLL TO TOP*/
-	// $('#back-top a').on('click', function(){
-	// 	$('body,html').animate({
-	// 		scrollTop: 0
-	// 	}, 800);
-	// });
 
 
 	/*обработка клика по странице (для скрытия меню, popup и тд)*/
@@ -191,27 +184,7 @@ $(document).ready(function(){
 	// });
 
 
-	/*YANDEX MAP*/
-	// if ($('.map-wrapp').length) {
-	// 	ymaps.ready(init);
-	// 	function init(){
-	// 		var myMap=new ymaps.Map("map-canvas",{
-	// 			center:[56.844412, 60.617085],
-	// 			zoom:15,
-	// 			controls:['zoomControl']
-	// 		}),
-	// 		Placemark1=new ymaps.Placemark([56.844412, 60.617085],{
-	// 			balloonContent:'',
-	// 			hintContent:'',
-	// 		},{
-	// 			preset:'islands#redDotIcon'
-	// 		})
-	// 		myMap.geoObjects.add(Placemark1);
-	// 		myMap.behaviors.disable('scrollZoom');
-	// 	}
-	// };
-
-
 
 
 });
+
