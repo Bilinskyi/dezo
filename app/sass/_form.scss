@@ -1,0 +1,21 @@
+input:not([type=submit]) {
+	display: inline-block;
+	outline: none;
+	border: none;
+}
+
+input[type=submit] {
+	display: inline-block;
+	outline: none;
+	border: none;
+	
+	&:hover {
+		
+	}
+	&:active {
+		transform: translateY(1px);
+	}
+}
+input.error {
+	border: 1px solid red !important;
+}

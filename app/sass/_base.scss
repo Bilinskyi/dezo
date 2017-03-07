@@ -1,0 +1,53 @@
+::-webkit-input-placeholder {font-family: 'Open Sans', sans-serif;font-weight: 400; color: #000;font-size: 14px;}
+::-moz-placeholder {font-family: 'Open Sans', sans-serif;font-weight: 400; color: #000;font-size: 14px;}
+:-moz-placeholder {font-family: 'Open Sans', sans-serif;font-weight: 400; color: #000;font-size: 14px;}
+:-ms-input-placeholder {font-family: 'Open Sans', sans-serif;font-weight: 400; color: #000;font-size: 14px;}
+
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+.center{text-align: center !important;}
+.text-l{text-align: left !important;}
+.text-r{text-align: right !important;}
+.fl-r{float: right!important;}
+.fl-l{float: left!important;}
+.clearfix:before, .clearfix:after {content: "";display: table;}
+.clearfix:after {clear: both;}
+.wrapper:before, .wrapper:after{content: ''; display: table;}
+.wrapper:after {clear: both;}
+.flow-hidden {overflow: hidden}
+body {
+	position: relative; 
+	color: #000;
+	font-family: $ub;
+	font-weight: 400;
+	    -webkit-font-smoothing: antialiased;
+}
+
+b {
+	font-weight: 700;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+.center-y {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
