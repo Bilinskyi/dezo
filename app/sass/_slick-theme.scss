@@ -42,6 +42,7 @@ $slick-opacity-not-active: 0.25 !default;
 /* Slider */
 
 .slick-list {
+
 	.slick-loading & {
 		background: #fff slick-image-url("../img/ajax-loader.gif") center center no-repeat;
 	}
@@ -63,6 +64,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev,
 .slick-next {
+	outline: none;
 	position: absolute;
 	display: block;
 	width: 60px;
@@ -193,6 +195,8 @@ $slick-opacity-not-active: 0.25 !default;
 	padding: 0;
 	margin: 0;
 	width: 100%;
+	left: 0;
+	right: 0;
 	@media #{$bp-small} {
 	      bottom: -45px;
 	}

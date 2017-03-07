@@ -1,6 +1,6 @@
 %table-css {
-	display: table;
-	width: 100%;
+	display: table !important;
+	// width: 100% !important;
 	&>* {
 		display: table-cell;
 		vertical-align: middle;
