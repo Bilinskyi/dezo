@@ -28,32 +28,57 @@ $(document).ready(function(){
 
 
 	/* SLICK_SLIDER */
-	// if ($('.yourslider').length) {
-	// 	$('.yourslider').slick({
-	// 		slidesToShow: 4,
-	// 		slidesToScroll: 1,
-	// 		centerMode: false,
-	// 		centerPadding: '30px',
-	// 		responsive: [
-	// 		{
-	// 			breakpoint: 1200,
-	// 			settings: {
-	// 				slidesToShow: 3,
-	// 				slidesToScroll: 1
-	// 			}
-	// 		},
-	// 		{
-	// 			breakpoint: 768,
-	// 			settings: {
-	// 				slidesToShow: 2,
-	// 				vertical: true,
-	// 				slidesToScroll: 1
-	// 			}
-	// 		}
-	// 		]
-	// 	});
-	// };
+	if ($('.partners').length) {
+		$('.partners').slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			centerMode: false,
+			centerPadding: '10px',
+			responsive: [
+			{
+				breakpoint: 1220,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			]
+		});
+	};
 
+
+	if ($('.products-slider').length) {
+		$('.products-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			adaptiveHeight: true,
+			draggable: false,
+			dots: true,
+			centerMode: false,
+			centerPadding: '10px'
+		});
+	};
 
 
 	/*MATCHHEIGHT*/
@@ -68,7 +93,16 @@ $(document).ready(function(){
 			padding: 0,
 			closeBtn : true
 		}).trigger('click');
+	});
+
+
+	/*tabs*/
+	$('.tab-caption').on('click', '.tab-caption__elem:not(.tab-caption__elem_active)', function() {
+		$(this).addClass('tab-caption__elem_active').siblings().removeClass('tab-caption__elem_active')
+		.closest('.tabs').find('.tab-content').removeClass('tab-content_active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('tab-content_active').css('display', 'block').animate({opacity: '1'}, 300);
 	})
+	
+
 
 	/*FANCYBOX*/
 	// $(".modal-form").fancybox({
@@ -99,12 +133,12 @@ $(document).ready(function(){
 
 
 	/*HIDE PLACEHOLDER*/
-	// $('input,textarea').focus(function(){
-	// 	$(this).data('placeholder',$(this).attr('placeholder'))
-	// 	.attr('placeholder','');
-	// }).blur(function(){
-	// 	$(this).attr('placeholder',$(this).data('placeholder'));
-	// });
+	$('input,textarea').focus(function(){
+		$(this).data('placeholder',$(this).attr('placeholder'))
+		.attr('placeholder','');
+	}).blur(function(){
+		$(this).attr('placeholder',$(this).data('placeholder'));
+	});
 
 
 	/* кнопка Вверх */

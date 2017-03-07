@@ -48,30 +48,30 @@
 }
 
 .angled-top-left{
-    @include angle-edge($pos-top: topleft, $angle-top: 5deg);
+    @include angle-edge($pos-top: topleft, $angle-top: 4.5deg);
 }
 
 .angled-top-right{
-    @include angle-edge($pos-top: topright, $angle-top: 5deg);
+    @include angle-edge($pos-top: topright, $angle-top: 4.5deg);
 }
 
 .angled-bottom-left{
-    @include angle-edge($pos-btm: bottomleft, $angle-btm: 5deg);
+    @include angle-edge($pos-btm: bottomleft, $angle-btm: 4.5deg);
 }
 
 .angled-bottom-right{
-    @include angle-edge($pos-btm: bottomright, $angle-btm: 5deg);
+    @include angle-edge($pos-btm: bottomright, $angle-btm: 4.5deg);
 }
 
 .angled-both-left{
-    @include angle-edge(topleft, 5deg, bottomleft, 5deg);
+    @include angle-edge(topleft, 4.5deg, bottomleft, 4.5deg);
 }
 .angled-both-right{
-    @include angle-edge(topright, 5deg, bottomright, 5deg);
+    @include angle-edge(topright, 4.5deg, bottomright, 4.5deg);
 }
 .angled-both-left-right{
-    @include angle-edge(topleft, 5deg, bottomright, 5deg);
+    @include angle-edge(topleft, 4.5deg, bottomright, 4.5deg);
 }
 .angled-both-right-left{
-    @include angle-edge(topright, 5deg, bottomleft, 5deg);
+    @include angle-edge(topright, 4.5deg, bottomleft, 4.5deg);
 }
